@@ -1,24 +1,3 @@
-def bread(func):
-    pass
-
-def salat(func):
-    pass
-
-def tomato(func):
-    pass
-
-def meat(func):
-    pass
-
-def make_sandwich():
-    pass
-
-def main():
-    make_sandwich()
-
-if __name__ == '__main__':
-    main()
-
 def make_bread(f):
     def wrapper():
         print("Bread")
@@ -29,7 +8,7 @@ def make_bread(f):
 def make_butter(f):
     def wrapper():
         print("Butter")
-        f() cou
+        f()
     return wrapper
 
 def make_salat(f):
@@ -55,6 +34,7 @@ def make_meat(f):
 @make_salat
 @make_tomato
 @make_meat
+@make_butter
 def make_sandwich():
     pass
 
