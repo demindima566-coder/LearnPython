@@ -1,8 +1,15 @@
 from random import random, choice
 
+import logging
+
 from my_decorator import retry
 
 exceptions = (ValueError, OSError)
+
+#logging
+logging.basicConfig (
+    level=logging.INFO, format = "%(asctime)s | %(levelname)s | %(message)s"
+)
 
 @retry(count=5)
 def random_exception() -> float:
@@ -13,4 +20,9 @@ def random_exception() -> float:
 
 if __name__ == "__main__":
     for _ in range(100):
-        print("result:", random_exception())
+        try:
+            result = random_exception()
+            logging.info(f"result: {result}")
+            print("result", result)
+        except Exception as e:
+            logging.error(f"Unhandled exception: {e}")
