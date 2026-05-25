@@ -1,0 +1,11 @@
+alph = "abcdefg"
+print('1:', alph)
+print('2:', alph[::-1])
+print('3:', alph[::2])
+print('4:', alph[1::2])
+print('5:', alph[:2])
+print('6:', alph[-1:])
+print('7:', alph[3:4])
+print('8:', alph[-3:])
+print('9:', alph[3:5])
+print('10:', alph[4:2:-1])
